@@ -12,6 +12,7 @@
 For AMD
 ```
 radeontop
+DRI_PRIME=1 glxgears
 ```
 
 Monitor GPU Performance 
@@ -34,3 +35,4 @@ Monitor GPU Performance
 hwinfo
 hardinfo
 pulseaudio-utils
+mesa-utils for glxgears
