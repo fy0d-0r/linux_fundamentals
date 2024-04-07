@@ -8,7 +8,7 @@ ufw enable
 
 ### Default Policy
 ```
-ufw default allow outgoine
+ufw default allow outgoing
 ufw default deny incoming
 ```
 
