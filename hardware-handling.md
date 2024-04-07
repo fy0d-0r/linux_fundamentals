@@ -6,7 +6,7 @@
 
 `sudo dmidecode --type 17`
 
-# Graphic Card (Model, GPU, VRAM, Clock Speed, GDDR)
+# Graphic Card (Model, GPU, VRAM, Core Clock Speed, GDDR)
 `sudo hwinfo --gfxcard`
 `sudo lshw -C display`
 For AMD
@@ -21,7 +21,7 @@ Monitor GPU Performance
 
 `lspci`
 
-# DISPLAY (Resolution, Refresh Rate, Type (OLED or LCD), 
+# DISPLAY (Resolution, Refresh Rate, Panel Type (OLED or LCD), 
 
 # MOTHERBOARD
 
