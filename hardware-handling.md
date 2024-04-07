@@ -8,8 +8,11 @@
 
 # GPU (Model, 
 
-# DISPLAY (Resolution, Refresh Rate, Type (OLED or LCD), 
+# PCIe
 
+`lspci`
+
+# DISPLAY (Resolution, Refresh Rate, Type (OLED or LCD), 
 
 # MOTHERBOARD
 
