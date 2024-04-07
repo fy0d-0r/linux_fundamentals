@@ -6,7 +6,9 @@
 
 `sudo dmidecode --type 17`
 
-# GPU (Model, 
+# Graphic Card (Model, GPU, VRAM, GDDR)
+`sudo hwinfo --gfxcard`
+Monitor GPU Performance 
 
 # PCIe
 
@@ -23,5 +25,7 @@
 # Audio
 
 # UTILITIES
+hwinfo
 hardinfo
 pulseaudio-utils
+
