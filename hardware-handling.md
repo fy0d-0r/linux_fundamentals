@@ -21,7 +21,7 @@ Monitor GPU Performance
 
 `lspci`
 
-# DISPLAY (Resolution, Refresh Rate, Panel Type (OLED or LCD), 
+# DISPLAY (Resolution, Refresh Rate, Panel Type (TN,OLED,LCD), 
 
 # MOTHERBOARD
 
