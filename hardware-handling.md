@@ -1,14 +1,14 @@
-# CPU
+# CPU (Model, Core, Thread, Cache size, Clock speed)
 
 `cat /proc/cpuinfo`
 
-# RAM
+# RAM (Capacity, DDR, Speed MT/s, Manufacturer, BANK Location)
 
 `sudo dmidecode --type 17`
 
-# GPU
+# GPU (Model, 
 
-# DISPLAY
+# DISPLAY (Resolution, Refresh Rate, Type (OLED or LCD), 
 
 
 # MOTHERBOARD
