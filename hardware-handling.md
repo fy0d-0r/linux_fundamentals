@@ -8,6 +8,9 @@
 
 # Graphic Card (Model, GPU, VRAM, GDDR)
 `sudo hwinfo --gfxcard`
+
+`sudo lshw -C display`
+
 Monitor GPU Performance 
 
 # PCIe
@@ -28,4 +31,3 @@ Monitor GPU Performance
 hwinfo
 hardinfo
 pulseaudio-utils
-
