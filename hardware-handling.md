@@ -2,8 +2,9 @@
 
 `cat /proc/cpuinfo`
 
-
 # RAM
+
+`sudo dmidecode --type 17`
 
 # GPU
 
