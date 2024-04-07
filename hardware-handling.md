@@ -8,8 +8,11 @@
 
 # Graphic Card (Model, GPU, VRAM, GDDR)
 `sudo hwinfo --gfxcard`
-
 `sudo lshw -C display`
+For AMD
+```
+radeontop
+```
 
 Monitor GPU Performance 
 
