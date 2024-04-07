@@ -6,7 +6,7 @@
 
 `sudo dmidecode --type 17`
 
-# Graphic Card (Model, GPU, VRAM, GDDR)
+# Graphic Card (Model, GPU, VRAM, Clock Speed, GDDR)
 `sudo hwinfo --gfxcard`
 `sudo lshw -C display`
 For AMD
