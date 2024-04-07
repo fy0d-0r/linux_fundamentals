@@ -1,5 +1,8 @@
 # CPU
 
+`cat /proc/cpuinfo`
+
+
 # RAM
 
 # GPU
@@ -9,7 +12,9 @@
 
 # MOTHERBOARD
 
-# POWER SUPPLY
+# POWER SUPPLY and POWER SAVING MODE
+
+
 
 # Audio
 
