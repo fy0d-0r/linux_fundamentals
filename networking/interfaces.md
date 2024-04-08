@@ -38,12 +38,6 @@ ip -j a
 ip -j -p a //with prettify
 ```
 
-### Routing Table 
-
-```
-ip route
-```
-
 ## Renaming a network interface
 
 ```
@@ -70,7 +64,12 @@ sudo ip addr del <old_ip_address>/<subnet_mask> dev <interface_name>
 sudo ip addr add <new_ip_address>/<subnet_mask> dev <interface_name>
 ```
 
-## Setting gateway
+### Show Routing Table 
+```
+ip route
+```
+
+## Setting Default/Static Route
 
 On iproute2
 ```
@@ -81,6 +80,7 @@ ip route add 172.16.0.0/16 via 192.168.1.1 dev wlan0
 ip route del 172.16.0.0/16 via 192.168.1.1 dev wlan0
 ```
 
+On route
 ```
 route add default gw 192.168.1.1 eth0
 route del default gw 192.168.1.1 eth0
