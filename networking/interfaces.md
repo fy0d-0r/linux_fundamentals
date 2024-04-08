@@ -1,14 +1,18 @@
 # `iproute2` Basics
 
 ### Output IP and Data Link Configurations 
-```
-ip address show
-ip addr
-ip a
-ip link show
-ip link
-ip l
-```
+
+`ip address show`
+or
+`ip addr`
+or
+`ip a`
+
+`ip link show`
+or
+`ip link`
+or
+`ip l`
 
 ### Brief and Colored Output
 ```
