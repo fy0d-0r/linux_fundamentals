@@ -74,6 +74,7 @@ sudo ip addr add <new_ip_address>/<subnet_mask> dev <interface_name>
 ```
 ip route
 ip -c r | column -t
+ip route get 8.8.8.8
 ```
 
 ## Setting Default/Static Route
