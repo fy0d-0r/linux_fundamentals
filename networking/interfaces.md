@@ -77,7 +77,7 @@ ip route add default via 192.168.1.1 dev wlan0
 ip route del default via 192.168.1.1 dev wlan0
 
 ip route add 172.16.0.0/16 via 192.168.1.1 dev wlan0
-ip route del 172.16.0.0/16 via 192.168.1.1 dev wlan0
+ip route del 172.16.0.0/16
 ```
 
 On route
