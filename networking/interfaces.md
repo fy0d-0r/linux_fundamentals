@@ -67,6 +67,7 @@ sudo ip addr add <new_ip_address>/<subnet_mask> dev <interface_name>
 ### Show Routing Table 
 ```
 ip route
+ip -c r | column -t
 ```
 
 ## Setting Default/Static Route
