@@ -1,4 +1,4 @@
-# Uncomplicated Firewall
+# Uncomplicated Firewall (UFW)
 ## Basics
 ### Status and Enabling
 ```
