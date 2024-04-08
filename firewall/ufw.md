@@ -2,15 +2,15 @@
 
 ### Status and Enabling
 ```
-ufw status
-ufw enable
+sudo ufw status
+sudo ufw enable
 ```
 
 
 ### Default Policy
 ```
-ufw default allow outgoing
-ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw default deny incoming
 ```
 ### Rules at Layer 4 Level
 
@@ -24,7 +24,49 @@ sudo ufw allow 22/tcp
 ```
 
 ```
-ufw allow ssh
-ufw allow 20 //the same as ssh
+sudo ufw allow ssh
+sudo ufw allow 20 //the same as ssh
+
+sudo ufw allow http
+sudo ufw allow 80
 ```
+### For a Range of Ports 
+
+```
+sudo ufw allow/deny starting_port:ending_port/protocol
+```
+```
+sudo ufw deny 300:310/UDP
+```
+
+### Denying or Allowing IP Address Connections
+
+```
+sudo ufw allow/deny from ipaddress
+```
+```
+sudo ufw allow from 192.168.100.28
+```
+
+```
+sudo ufw allow from ipaddress to any port portnumber
+```
+```
+sudo ufw allow from 192.168.1.3 to any port 44
+```
+allows an IP address to connect to your server only when using port 44
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
