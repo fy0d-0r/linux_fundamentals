@@ -53,8 +53,9 @@ sudo ufw allow from ipaddress to any port portnumber
 ```
 ```
 sudo ufw allow from 192.168.1.3 to any port 44
+sudo ufw deny from 192.168.1.3 to any port 44
 ```
-allows an IP address to connect to your server only when using port 44
+allow/deny an IP address to connect to your server only when using port 44
 
 
 
