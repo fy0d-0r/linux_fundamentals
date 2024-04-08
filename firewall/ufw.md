@@ -49,6 +49,12 @@ sudo ufw allow/deny starting_port:ending_port/protocol
 sudo ufw deny 300:310/UDP
 ```
 
+### For Specific Protocol
+```
+sudo ufw allow proto udp from any to any
+```
+
+
 ### Denying or Allowing IP Address Connections
 
 ```
