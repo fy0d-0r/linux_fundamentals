@@ -15,7 +15,7 @@ ip link
 ip l
 ```
 
-### Settign MTU
+### Setting MTU
 ```
 ip link set lo mtu 70000
 ```
@@ -106,13 +106,39 @@ sudo ip link set <interface_name> up
 sudo ip link set <interface_name> down
 ```
 
-## Checking if a interface is up or down
+### Adding Interface 
 
 ```
-ip link
-ip link show
-ip link eth0
+ip link add test0 type dummy
 ```
+
+### Detail and Satistic Output
+```
+ip -d addr show eth0
+ip -d link show eth0
+```
+```
+ip -s addr show eth0
+ip -s addr show eth0
+```
+
+### ip tunnel
+
+```
+ip tunnel show
+ip tunnel add tn0 mode gre local 192.168.1.1 remote 203.0.113.10
+ip tunnel del tn0
+```
+
+### ip neighbour 
+The same as `arp` utility
+```
+ip n
+```
+
+
+
+
 
 ## Setting a new custom(virtual) interface(tun,tap)
 
