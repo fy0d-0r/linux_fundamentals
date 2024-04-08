@@ -3,6 +3,7 @@
 ### Status and Enabling
 ```
 sudo ufw status
+sudo ufw status numbered
 sudo ufw status verbose
 sudo ufw enable
 sudo ufw show raw
