@@ -1,3 +1,45 @@
+# `iproute2` Basics
+
+### Output IP and Data Link Configurations 
+```
+ip address show
+ip addr
+ip a
+ip link show
+ip link
+ip l
+```
+
+### Brief and Colored Output
+```
+ip -br -c link show
+ip -br -c l
+
+ip -br -c address show
+ip -br -c addr
+ip -br -c a
+```
+
+### In Oneline
+```
+ip --oneline a
+ip -o a | column -t 
+ip -o -4 a | awk '{print $4}'
+ip -o -4 a | awk '{print $4}' | cut -d/ -f1
+```
+
+### Output in JSON Format
+```
+ip -j a
+ip -j -p a //with prettify
+```
+
+### Routing Table 
+
+```
+ip route
+```
+
 ## Renaming a network interface
 
 ```
