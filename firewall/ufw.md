@@ -66,6 +66,23 @@ sudo ufw deny from 192.168.1.3 to 192.168.1.1 port 44
 ```
 allow/deny an IP address to connect to port 44 of your server.
 
+### Allow Local Network Connections
+```
+sudo ufw allow 192.168.0.0/24 
+```
+
+### Using App List
+```
+sudo ufw app list
+sudo ufw allow Transmission
+```
+
+### Rate limitation
+```
+sudo ufw limit ssh
+sudo ufw limit 80
+```
+
 ### Deleting Rules
 
 ```
@@ -78,12 +95,10 @@ sudo ufw delete rule_number
 sudo ufw reset
 ```
 
-## UFW Logging
-```
-sudo ufw status verbose
-```
+## Logging
 ```
 sudo ufw logging on
+sudo ufw loggine off
 ```
 ```
 sudo less /var/log/ufw*
