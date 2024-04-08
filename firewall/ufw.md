@@ -1,15 +1,21 @@
 # Uncomplicated Firewall (UFW)
 ## Basics
-### Status and Enabling
+
+### Enabling
+```
+sudo systemctl enable ufw.service
+sudo systemctl start ufw.service
+sudo ufw enable
+```
+
+### Status
 ```
 sudo ufw status
 sudo ufw status numbered
 sudo ufw status verbose
-sudo ufw enable
 sudo ufw show raw
 sudo ufw app list
 ```
-
 
 ### Default Policy
 ```
