@@ -1,5 +1,5 @@
-## Uncomplicated Firewall
-
+# Uncomplicated Firewall
+## Basics
 ### Status and Enabling
 ```
 sudo ufw status
@@ -62,9 +62,28 @@ sudo ufw deny from 192.168.1.3 to 192.168.1.1 port 44
 ```
 allow/deny an IP address to connect to port 44 of your server.
 
+### Deleting Rules
 
+```
+sudo ufw status numbered
+sudo ufw delete rule_number
+```
 
+### Resetting UFW Rules
+```
+sudo ufw reset
+```
 
+## UFW Logging
+```
+sudo ufw status verbose
+```
+```
+sudo ufw logging on
+```
+```
+sudo less /var/log/ufw*
+```
 
 
 
