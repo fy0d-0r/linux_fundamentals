@@ -2,18 +2,19 @@
 
 ### Output IP and Data Link Configurations 
 
-`ip address show`
-or
-`ip addr`
-or
-`ip a`
+```
+ip address show
+ip addr show lo
+ip addr
+ip a
+```
 
-`ip link show`
-or
-`ip link`
-or
-`ip l`
-
+```
+ip link show
+ip link show lo
+ip link
+ip l
+```
 ### Brief and Colored Output
 ```
 ip -br -c link show
