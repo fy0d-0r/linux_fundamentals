@@ -82,6 +82,11 @@ ip route add 172.16.0.0/16 via 192.168.1.1 dev wlan0
 ip route del 172.16.0.0/16
 ```
 
+```
+ip route change default via 10.0.0.1 dev eth0
+ip route change 172.16.0.0/16 via 10.0.0.1 dev eth0
+```
+
 On route
 ```
 route add default gw 192.168.1.1 eth0
