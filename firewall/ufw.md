@@ -2,10 +2,11 @@
 ## Basics
 ### Status and Enabling
 ```
-sudo ufw show raw
 sudo ufw status
 sudo ufw status verbose
 sudo ufw enable
+sudo ufw show raw
+sudo ufw app list
 ```
 
 
