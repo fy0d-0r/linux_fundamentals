@@ -31,6 +31,17 @@ Monitor GPU Performance
 
 # Audio
 
+
+# Operating System Informations 
+
+`uname -a`
+
+`cat /etc/os-release`
+
+`neofetch`
+
+`screenfetch`
+
 # UTILITIES
 hwinfo
 hardinfo
