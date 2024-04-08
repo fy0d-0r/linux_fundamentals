@@ -1,7 +1,6 @@
 # `iproute2` Basics
 
 ### Output IP and Data Link Configurations 
-
 ```
 ip address show
 ip addr show lo
@@ -15,6 +14,12 @@ ip link show lo
 ip link
 ip l
 ```
+
+### Settign MTU
+```
+ip link set lo mtu 70000
+```
+
 ### Brief and Colored Output
 ```
 ip -br -c link show
