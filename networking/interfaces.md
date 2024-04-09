@@ -135,10 +135,27 @@ The same as `arp` utility
 ```
 ip n
 ```
+### Manage TCP Metrics
+```
+ip tcpmetrics show
+```
 
+### Watch for Netlink Messages 
+```
+ip monitor
+ip -4 monitor neigh
+```
 
+### Multicast Address
+```
+ip maddress show lo
+ip mroute show
+```
 
-
+### Manage Neighbour Cache
+```
+ip ntable 
+```
 
 ## Setting a new custom(virtual) interface(tun,tap)
 
