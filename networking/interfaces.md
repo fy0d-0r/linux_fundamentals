@@ -164,20 +164,6 @@ ip ntable
 
 ```
 sudo apt install bridge-utils
-sudo brctl addbr br0
-sudo brctl addif br0 ens33
-```
-sudo nano /etc/network/interfaces 
-```
-auto lo
-iface lo inet loopback
-
-auto br0
-iface br0 inet static
-  bridge_ports    ens33
-  address  192.168.7.124
-  netmask  255.255.255.0
-  gateway  192.168.7.1
 ```
 
 
