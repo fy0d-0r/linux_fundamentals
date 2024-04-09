@@ -7,24 +7,34 @@ sudo ip link add name br0 type bridge
 sudo ip link add name vth1 type veth peer name vth_1
 sudo ip link add name vth2 type veth peer name vth_2
 ```
+```
+ip -br -c link show type bridge
+ip -br -c link show
+```
 
-
-
-
-
-
-
-
-
-
-
+Creating Namespaces for two end points
 
 ```
-sudo ip link add name br0 type bridge
-sudo ip -br -c link show type bridge
+sudo ip netns add ns1
+sudo ip netns add ns2
+ip netns ls
+```
 
+
+
+
+
+
+
+
+
+In Summary
+```
+sudo ip link add name br0 type bridge
 sudo ip link add name vth1 type veth peer name vth_1 
-sudo ip link add name vth2 type veth peer name vth_2 <=
+sudo ip link add name vth2 type veth peer name vth_2
+sudo ip -br -c link show type bridge
+sudo ip -br -c link show
 
 sudo ip netns add ns1
 sudo ip netns add ns2
