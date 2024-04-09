@@ -1,5 +1,24 @@
 # Bridge Interface Management
 
+Creating the required interfaces
+
+```
+sudo ip link add name br0 type bridge
+sudo ip link add name vth1 type veth peer name vth_1
+sudo ip link add name vth2 type veth peer name vth_2
+```
+
+
+
+
+
+
+
+
+
+
+
+
 ```
 sudo ip link add name br0 type bridge
 sudo ip -br -c link show type bridge
