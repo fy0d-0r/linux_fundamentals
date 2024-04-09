@@ -178,7 +178,9 @@ ip link add name vth1 type veth peer vth_1
 ip link add name vth2 type veth peer vth_2
 ```
 
-
+```
+ip netns ls
+```
 
 
 
