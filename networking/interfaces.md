@@ -159,20 +159,7 @@ ip ntable
 
 ## Setting a new custom(virtual) interface(tun,tap)
 
-
-# Bridging
-
-```
-sudo apt install bridge-utils
-```
-
-### Adding Bridge Interface
-Creating a Bridge Intreface
-```
-ip link add name br0 type bridge
-```
-
-Creating Virtual Interface Pairs
+## Creating Virtual Interface Pairs
 ```
 ip link add name vth1 type veth peer vth_1
 ip link add name vth2 type veth peer vth_2
@@ -182,7 +169,7 @@ ip link add name vth2 type veth peer vth_2
 ip netns ls
 ```
 
-
+Persistent Configuration: Changes made using ip link are typically not persistent across system reboots. You may need to use additional configuration tools or scripts (/etc/network/interfaces on Debian-based systems) to make the configuration persistent.
 
 
 
