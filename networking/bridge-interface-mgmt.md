@@ -113,3 +113,9 @@ sudo ip link set dev br0 up
 ip netns exec ns1 ping 192.168.10.2 
 ip netns exec ns2 ping 192.168.10.1
 ```
+
+References
+```
+https://www.youtube.com/watch?v=oVu0O0UMBCc
+https://www.youtube.com/watch?v=6aJG0ztP0GQ
+```
