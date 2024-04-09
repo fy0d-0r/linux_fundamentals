@@ -60,7 +60,24 @@ sudo ip netns exec ns1 ip link set dev vth_1 up
 sudo ip -n ns2 link set dev vth_2 up
 ```
 
+Adding interfaces vth1 and vth2 to the bridge interface br0 as the master
+```
+sudo ip link set dev vth1 master br0
+sudo ip link set dev vth2 master br0
+```
 
+Bringing up vth1,vth2 and br0 interfaces
+```
+sudo ip link set dev vth1 up
+sudo ip link set dev vth2 up
+sudo ip link set dev br0 up
+```
+
+Testing to comfirm that namespaces can ping through the bridge
+```
+sudo ip netns exec ns1 ping 192.168.10.2
+sudo ip netns exec ns2 ping 192.168.10.1
+```
 
 In Summary
 ```
