@@ -166,6 +166,17 @@ ip ntable
 sudo apt install bridge-utils
 ```
 
+### Adding Bridge Interface
+Creating a Bridge Intreface
+```
+ip link add name br0 type bridge
+```
+
+Creating Virtual Interface Pairs
+```
+ip link add name vth1 type veth peer vth_1
+ip link add name vth2 type veth peer vth_2
+```
 
 
 
