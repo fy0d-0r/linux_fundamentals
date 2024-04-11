@@ -41,7 +41,7 @@ tail .bashrc
 ## AWK
 `awk` manipulates each line in loop
 
-`$0` prints the whole line
+`$0` represents the whole line
 ```
 awk '{print $0}' filename
 ```
