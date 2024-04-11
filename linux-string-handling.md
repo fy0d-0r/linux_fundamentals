@@ -30,7 +30,7 @@ seq 1 5
 seq 0 2 10
 ```
 
-## sort,wc
+## `sort` and `wc` Utilities
 byte count and line count
 ```
 wc -c
