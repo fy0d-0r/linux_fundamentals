@@ -59,10 +59,21 @@ Using $NF to print last field
 ```
 awk -F "/" '{print $NF}' file.txt
 ```
-Using Regular Expressions specified between two '/' s for selecting specific lines
-The following command deals with the lines that start with forward slash `^\/` .
+
+Regular expressions are used to select lines according to the rules defined. Regular expressions are specified between `/` s.
+
+The following command deals with the lines that start with forward slash `/` .
 ```
 awk -F "/" '/^\// {print $NF}' /etc/shells
+```
+
+Regular expressions can also be used as followings.
+```
+awk '/sshd/' /etc/passwd
+awk '/^sshd/' /etc/passwd
+awk '/nologin$/' /etc/passwd
+awk '!/false$|nologin$/' /etc/passwd
+awk -F ':' '!/false$|nologin$/ {print $1}' /etc/passwd
 ```
 
 Modifying text
@@ -92,12 +103,14 @@ BEGIN {
 - The main block ({ ... }) processes each input line and prints specific fields separated by | (OFS).
 
 
-Regular expressions are used to select lines according to the rule. Regular expressions are defined between '/' s.
+
+
+Handling line numbers
 ```
-awk '/sshd/' /etc/passwd
-awk '/^sshd/' /etc/passwd
-awk '/nologin$/' /etc/passwd
-awk '!/false$|nologin$/' /etc/passwd
-awk -F ':' '!/false$|nologin$/ {print $1}' /etc/passwd
 ```
+
+
+
+
+
 
