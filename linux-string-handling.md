@@ -2,10 +2,18 @@
 
 Utilities
 ```
+cat
 echo,seq,grep
 awk,sed,cut,tr
 uniq,sort,wc,column
 xargs,xclip
+```
+
+## The `cat` Utility
+
+Print along with line number
+```
+grep -v "false\|nologin" /etc/passwd | cat -n
 ```
 
 ## `echo` and `seq` Utilities
@@ -65,10 +73,18 @@ grep -w "text" file.txt #exactly only "test"
 -r #recursive search
 -l #L return all the files that contain a match
 -c #return all the files that contain a match and the number of matches
-grep -m 1 "test" file.txt #first line of where word "test" found
-grep -m 5 "test" file.txt #first five lines of where word "test" found
-grep -v <sth> #invert search (exclude what is specified)
-Eg: cat /etc/passwd | grep -v "false\|nologin" "It search users that are disabled standard shell"
+```
+Extracting the first specified lines
+The following command allows us to extract the first five lines in which the word `test` is found
+```
+grep -m 5 "test" file.txt
+grep -m 6 "false" /etc/passwd
+grep -m 10 "false\|nologin" /etc/passwd
+```
+
+Invert search option `-v` allows us to exclude what is specified
+```
+grep -v "false\|nologin" /etc/passwd
 ```
 
 ## The `awk` Utility
