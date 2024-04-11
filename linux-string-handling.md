@@ -1,5 +1,49 @@
 # Linux String Handling
 
+Utilities
+```
+echo,seq,grep
+awk,sed,cut,tr
+uniq,sort,wc,column
+xargs,xclip
+```
+
+## `echo` and `seq` Utilities
+
+generate a sequence of numbers/characters
+```
+echo {1..9}
+echo {a..e}
+echo {A..Z}
+```
+disable outputting trailing newline
+```
+echo -n
+```
+enable interpretation of backslash escapes
+```
+echo -e
+```
+
+```
+seq 1 5
+seq 0 2 10
+```
+
+## sort,wc
+byte count and line count
+```
+wc -c
+wc -l
+```
+
+numeric sorting
+```
+sort -n
+```
+
+## `grep` Utility
+
 ## `awk` Utility
 `awk` manipulates each line in loop
 
@@ -219,6 +263,9 @@ awk 'NR < 13' .bashrc
 ```
 tail .bashrc 
 ```
-
+### Using `ls` with Wildcard
+```
+ls *
+```
 
 
