@@ -18,6 +18,7 @@ echo "Hello" | awk '{print tolower($0)}'
 `/etc/passwd`
 ```
 grep -v "false\|nologin" /etc/passwd | tr ":" " " | column -t
+awk -F ":" '{print $1}' /etc/passwd
 ```
 
 Printing first specified lines 
@@ -28,3 +29,26 @@ awk 'NR < 13' .bashrc
 ```
 
 ## AWK
+
+
+Specifying field separator using -F flag. Default field separator is space.
+```
+awk -F ":" '{print $1}' /etc/passwd
+awk -F ":" '{print $1":"$6":"$7}' /etc/passwd
+awk -F ":" '{print $1"\t"$6"\t"$7}' /etc/passwd
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
