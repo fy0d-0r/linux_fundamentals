@@ -20,6 +20,8 @@ echo "Hello" | awk '{print tolower($0)}'
 grep -v "false\|nologin" /etc/passwd | tr ":" " " | column -t
 awk -F ":" '{print $1}' /etc/passwd
 awk -F ":" '{print $1"\t"$7}' /etc/passwd | column -t
+awk '!/false$|nologin$/' /etc/passwd
+awk -F ':' '!/false$|nologin$/ {print $1}' /etc/passwd
 ```
 
 ### `/etc/shells`
@@ -90,6 +92,12 @@ BEGIN {
 - The main block ({ ... }) processes each input line and prints specific fields separated by | (OFS).
 
 
-
-
+Regular expressions are used to select lines according to the rule. Regular expressions are defined between '/' s.
+```
+awk '/sshd/' /etc/passwd
+awk '/^sshd/' /etc/passwd
+awk '/nologin$/' /etc/passwd
+awk '!/false$|nologin$/' /etc/passwd
+awk -F ':' '!/false$|nologin$/ {print $1}' /etc/passwd
+```
 
