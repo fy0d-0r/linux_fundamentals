@@ -22,11 +22,17 @@ awk -F ":" '{print $1}' /etc/passwd
 awk -F ":" '{print $1"\t"$7}' /etc/passwd | column -t
 awk '!/false$|nologin$/' /etc/passwd
 awk -F ':' '!/false$|nologin$/ {print $1}' /etc/passwd
+awk -F ':' 'NR<11 {print $1}' /etc/passwd
 ```
 
 ### `/etc/shells`
 ```
 awk -F '/' '/^\// {print $NF}' /etc/shells | uniq | sort
+```
+
+### `df -h`
+```
+df -h | awk '/^\/dev\/nvme/ {print $1"\t"$2"\t"$3}'
 ```
 
 ### Printing first lines 
@@ -106,9 +112,21 @@ BEGIN {
 
 
 Handling line numbers
+
+Line number can be specified in `NR` variable.
 ```
+awk 'NR==2' /etc/passwd
+awk 'NR==2 {print $3}' /etc/passwd
 ```
 
+We can aslo use `>` and `<` operators.
+```
+awk 'NR<11 /etc/passwd`
+awk 'NR>20' /etc/passwd
+
+awk -F ':' 'NR<11 {print $1}' /etc/passwd
+awk -F ':' 'NR>20 {print $1}' /etc/passwd
+```
 
 
 
