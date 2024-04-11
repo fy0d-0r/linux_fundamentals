@@ -27,13 +27,13 @@ awk -F ":" '{print $1"\t"$7}' /etc/passwd | column -t
 awk -F '/' '/^\// {print $NF}' /etc/shells | uniq | sort
 ```
 
-### Printing first specified lines 
+### Printing first lines 
 ```
 head .bashrc
 sed 11q .bashrc
 awk 'NR < 13' .bashrc
 ```
-### Printing last specified lines
+### Printing last lines
 ```
 tail .bashrc 
 ```
