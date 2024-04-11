@@ -42,9 +42,36 @@ numeric sorting
 sort -n
 ```
 
-## `grep` Utility
+## The `grep` Utility
 
-## `awk` Utility
+Format
+```
+grep <sometext> <file1> <file2> <file3> 
+```
+
+```
+grep "function" file1.php file2.php file3.php
+grep "function" ./* (The same as: grep "function" *)
+```
+```
+grep ^[0-9] file.txt #starts with number
+-i #case insensitive
+ ifconfig | grep -i '^(linux|unix)'
+grep -w "text" file.txt #exactly only "test"
+-n #also show line number
+-B #before
+-A #after
+-C #Before & After
+-r #recursive search
+-l #L return all the files that contain a match
+-c #return all the files that contain a match and the number of matches
+grep -m 1 "test" file.txt #first line of where word "test" found
+grep -m 5 "test" file.txt #first five lines of where word "test" found
+grep -v <sth> #invert search (exclude what is specified)
+Eg: cat /etc/passwd | grep -v "false\|nologin" "It search users that are disabled standard shell"
+```
+
+## The `awk` Utility
 `awk` manipulates each line in loop
 
 `$0` represents the whole line
@@ -161,7 +188,7 @@ Extract Digits
 echo "my phone number is 09123456789" | tr -cd '[:digit:]\n'
 ```
 
-## `sed` Utility
+## The `sed` Utility
 
 `sed` stands for "String Editor".
 ```
