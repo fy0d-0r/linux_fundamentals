@@ -19,6 +19,12 @@ echo "Hello" | awk '{print tolower($0)}'
 ```
 grep -v "false\|nologin" /etc/passwd | tr ":" " " | column -t
 awk -F ":" '{print $1}' /etc/passwd
+awk -F ":" '{print $1"\t"$7}' /etc/passwd | column -t
+```
+
+`/etc/shells`
+```
+awk -F '/' '/^\// {print $NF}' /etc/shells | uniq | sort
 ```
 
 Printing first specified lines 
@@ -30,7 +36,6 @@ awk 'NR < 13' .bashrc
 
 ## AWK
 
-
 Specifying field separator using -F flag. Default field separator is space.
 ```
 awk -F ":" '{print $1}' /etc/passwd
@@ -38,8 +43,15 @@ awk -F ":" '{print $1":"$6":"$7}' /etc/passwd
 awk -F ":" '{print $1"\t"$6"\t"$7}' /etc/passwd
 ```
 
-
-
+Using $NF to print last field
+```
+awk -F "/" '{print $NF}' file.txt
+```
+Using Regular Expressions specified between two '/' s for selecting specific lines
+The following command deals with the lines that start with forward slash `^\/` .
+```
+awk -F "/" '/^\// {print $NF}' /etc/shells
+```
 
 
 
