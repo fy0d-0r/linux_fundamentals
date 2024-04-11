@@ -58,7 +58,12 @@ The following command deals with the lines that start with forward slash `^\/` .
 awk -F "/" '/^\// {print $NF}' /etc/shells
 ```
 
-
+Modifying text
+```
+awk '{$2="text"}' filename
+awk -F ':' '{$2="text";print $0}' /etc/passwd
+awk -F ':' '{$2="text";print $1"\t"$2}' /etc/passwd | column -t
+```
 
 
 
