@@ -160,7 +160,7 @@ sed -i 's/ *$//' filename
 Deleting unnessary spaces and tabs at the end of each line
 ```
 sed -i 's/[[:space:]]*$//' filename
-``1
+```
 
 Deleting Empty lines
 ```
