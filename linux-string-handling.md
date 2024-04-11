@@ -38,7 +38,6 @@ awk 'NR < 13' .bashrc
 tail .bashrc 
 ```
 
-
 ## AWK
 
 Specifying field separator using -F flag. Default field separator is space.
@@ -65,10 +64,24 @@ awk -F ':' '{$2="text";print $0}' /etc/passwd
 awk -F ':' '{$2="text";print $1"\t"$2}' /etc/passwd | column -t
 ```
 
+Replacing field separators
+```
+awk 'BEGIN{FS=":";OFS="|"} {print $1,$6,$7}' /etc/passwd
+```
 
+```
+BEGIN {
+    FS = ":";   # Set input field separator to colon (:)
+    OFS = "|";  # Set output field separator to pipe (|)
+}
 
-
-
+{
+    # Process each input line (not executed for BEGIN block)
+    print $1, $6, $7;  # Print specific fields using OFS (|)
+}
+```
+- The BEGIN block initializes FS and OFS to specify field separators.
+- The main block ({ ... }) processes each input line and prints specific fields separated by | (OFS).
 
 
 
