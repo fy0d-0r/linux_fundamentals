@@ -1,50 +1,6 @@
 # Linux String Handling
 
-## Use Cases
-### Upper Case/Lower Case
-Translating lowercases to uppercases
-```
-sed 's/[a-z]/\U&/g' filename
-echo "Hello" | tr '[:lower:]' '[:upper:]'
-echo "Hello" | awk '{print toupper($0)}'
-```
-Translating uppercases to lowercases
-```
-sed 's/[A-Z]/\L&/g' filename
-echo "Hello" | tr '[:upper:]' '[:lower:]'
-echo "Hello" | awk '{print tolower($0)}'
-```
 
-### `/etc/passwd`
-```
-grep -v "false\|nologin" /etc/passwd | tr ":" " " | column -t
-awk -F ":" '{print $1}' /etc/passwd
-awk -F ":" '{print $1"\t"$7}' /etc/passwd | column -t
-awk '!/false$|nologin$/' /etc/passwd
-awk -F ':' '!/false$|nologin$/ {print $1}' /etc/passwd
-awk -F ':' 'NR<11 {print $1}' /etc/passwd
-```
-
-### `/etc/shells`
-```
-awk -F '/' '/^\// {print $NF}' /etc/shells | uniq | sort
-```
-
-### `df -h`
-```
-df -h | awk '/^\/dev\/nvme/ {print $1"\t"$2"\t"$3}'
-```
-
-### Printing first lines 
-```
-head .bashrc
-sed 11q .bashrc
-awk 'NR < 13' .bashrc
-```
-### Printing last lines
-```
-tail .bashrc 
-```
 
 ## AWK
 `awk` manipulates each line in loop
@@ -131,6 +87,50 @@ awk 'NR>3 && NR<10' /etc/passwd
 ```
 
 
+## Use Cases
+### Upper Case/Lower Case
+Translating lowercases to uppercases
+```
+sed 's/[a-z]/\U&/g' filename
+echo "Hello" | tr '[:lower:]' '[:upper:]'
+echo "Hello" | awk '{print toupper($0)}'
+```
+Translating uppercases to lowercases
+```
+sed 's/[A-Z]/\L&/g' filename
+echo "Hello" | tr '[:upper:]' '[:lower:]'
+echo "Hello" | awk '{print tolower($0)}'
+```
 
+### `/etc/passwd`
+```
+grep -v "false\|nologin" /etc/passwd | tr ":" " " | column -t
+awk -F ":" '{print $1}' /etc/passwd
+awk -F ":" '{print $1"\t"$7}' /etc/passwd | column -t
+awk '!/false$|nologin$/' /etc/passwd
+awk -F ':' '!/false$|nologin$/ {print $1}' /etc/passwd
+awk -F ':' 'NR<11 {print $1}' /etc/passwd
+```
+
+### `/etc/shells`
+```
+awk -F '/' '/^\// {print $NF}' /etc/shells | uniq | sort
+```
+
+### `df -h`
+```
+df -h | awk '/^\/dev\/nvme/ {print $1"\t"$2"\t"$3}'
+```
+
+### Printing first lines 
+```
+head .bashrc
+sed 11q .bashrc
+awk 'NR < 13' .bashrc
+```
+### Printing last lines
+```
+tail .bashrc 
+```
 
 
