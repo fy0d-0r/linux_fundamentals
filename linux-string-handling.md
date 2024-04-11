@@ -1,8 +1,6 @@
 # Linux String Handling
 
-
-
-## AWK
+## `awk` Utility
 `awk` manipulates each line in loop
 
 `$0` represents the whole line
@@ -85,7 +83,89 @@ awk -F ':' 'NR>20 {print $1}' /etc/passwd
 
 awk 'NR>3 && NR<10' /etc/passwd
 ```
+## `cut & tr` Utilities
 
+Search and replace characters
+```
+echo "This is a line of text" | tr 'a' 'A'
+echo "This is a line of text" | tr 'aeio' 'AEIO'
+```
+
+Deleting/Complement Deleting characters
+```
+echo "This is a line of text" | tr -d 'aeio'
+echo "This is a line of text" | tr -cd 'aeio\n'
+```
+
+Squeezing characters
+```
+echo "Thiis iis aa liiinee ooof teeext" | tr -s 'aeio'
+```
+
+Translate lower case to upper case
+```
+echo "This is a line of text" | tr '[:lower:]' '[:upper:]'
+```
+
+Generate Random Passwords
+```
+head 3 /dev/urandom | tr -cd '[:print:]'
+```
+
+Extract Digits
+```
+echo "my phone number is 09123456789" | tr -cd '[:digit:]\n'
+```
+
+## `sed` Utility
+
+`sed` stands for "String Editor".
+```
+sed 's/red/green' file.txt
+sed 's/red/green/g' file.txt
+```
+```
+echo "Derek" | sed 's/Derek/DT/g'
+```
+
+```
+echo "The Emacs file manager is dired red" | sed 's/ red/ green/g' 
+```
+
+Rewirte or Modify the file
+```
+sed -i 's/find/replace/g' filename.txt
+sed -i 's/Taylor/Tyler/g' .bashrc
+```
+
+Search for specific lines and subsititude
+```
+tldr sed | sed '/Replace/s/the/THE'
+```
+Delete lines matching the pattern
+```
+sed '/pattern/d' filename
+```
+
+Multiple Substitutions
+```
+cat /etc/shells | sed -e 's/usr/u/g' -e 's/bin/b/g'
+```
+
+Deleting unnessary spaces only (not tabs) at the end of each line
+```
+sed -i 's/ *$//' filename
+```
+
+Deleting unnessary spaces and tabs at the end of each line
+```
+sed -i 's/[[:space:]]*$//' filename
+``1
+
+Deleting Empty lines
+```
+cat filename | sed -i '/^$/d'
+```
 
 ## Use Cases
 ### Upper Case/Lower Case
@@ -122,6 +202,13 @@ awk -F '/' '/^\// {print $NF}' /etc/shells | uniq | sort
 df -h | awk '/^\/dev\/nvme/ {print $1"\t"$2"\t"$3}'
 ```
 
+### `ps` Command
+
+```
+ps -ef | wc -l
+ps -ef | awk 'END {print NR}'
+```
+
 ### Printing first lines 
 ```
 head .bashrc
@@ -132,5 +219,6 @@ awk 'NR < 13' .bashrc
 ```
 tail .bashrc 
 ```
+
 
 
