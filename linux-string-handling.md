@@ -39,6 +39,12 @@ tail .bashrc
 ```
 
 ## AWK
+`awk` manipulates each line in loop
+
+`$0` prints the whole line
+```
+awk '{print $0}' filename
+```
 
 Specifying field separator using -F flag. Default field separator is space.
 ```
