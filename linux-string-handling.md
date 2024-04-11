@@ -1,6 +1,6 @@
 # Linux String Handling
 
-
+## Use Cases
 ### Upper Case/Lower Case
 Translating lowercases to uppercases
 ```
@@ -15,24 +15,29 @@ echo "Hello" | tr '[:upper:]' '[:lower:]'
 echo "Hello" | awk '{print tolower($0)}'
 ```
 
-`/etc/passwd`
+### `/etc/passwd`
 ```
 grep -v "false\|nologin" /etc/passwd | tr ":" " " | column -t
 awk -F ":" '{print $1}' /etc/passwd
 awk -F ":" '{print $1"\t"$7}' /etc/passwd | column -t
 ```
 
-`/etc/shells`
+### `/etc/shells`
 ```
 awk -F '/' '/^\// {print $NF}' /etc/shells | uniq | sort
 ```
 
-Printing first specified lines 
+### Printing first specified lines 
 ```
 head .bashrc
 sed 11q .bashrc
 awk 'NR < 13' .bashrc
 ```
+### Printing last specified lines
+```
+tail .bashrc 
+```
+
 
 ## AWK
 
