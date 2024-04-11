@@ -126,6 +126,8 @@ awk 'NR>20' /etc/passwd
 
 awk -F ':' 'NR<11 {print $1}' /etc/passwd
 awk -F ':' 'NR>20 {print $1}' /etc/passwd
+
+awk 'NR>3 && NR<10' /etc/passwd
 ```
 
 
