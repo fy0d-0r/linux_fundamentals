@@ -18,15 +18,6 @@ Type=oneshot
 Type=dbus
 Type=idle
 ```
-Type option indicates startup behaviour.
-
-
-notify and simple is default and common type
-notify and simple types cause systemd to consider the service to be started up as soon as you start it.
-notify is the same except it's not configured to be running until the process tells systemd that it's ready.
-forking	- the process is configured to be started when other processes are spawned from a parent process and then the parent process stops to where the children are the only processes that are running.
-
-
 
 ### `Type=simple`
 
@@ -41,6 +32,13 @@ forking	- the process is configured to be started when other processes are spawn
 ### `Type=dbus`
 
 ### `Type=idle`
+
+- Type option indicates startup behaviour.
+- `notify` and `simple` service types are default and common types.
+- `notify` and `simple` types cause systemd to consider the service to be started up as soon as you start it.
+- `notify` is the same except it's not configured to be running until the process tells systemd that it's ready.
+- In `forking`, the process is configured to be started when other processes are spawned from a parent process and then the parent process stops to where the children are the only processes that are running.
+
 
 
 
