@@ -7,6 +7,13 @@ Unit files have three sections
 [Install]
 ```
 
-## Unit File Types
-simple
-oneshot
+## Service Types
+```
+Type=exec
+Type=notify
+Type=simple
+Type=forking
+Type=oneshot
+Type=dbus
+Type=idle
+```
