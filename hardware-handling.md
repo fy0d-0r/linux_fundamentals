@@ -24,19 +24,18 @@ For Nvidia
 nvidia-smi
 LANG=C nvidia-smi --query-gpu=memory.total --format=csv,noheader,nounits
 ```
-
-
+Reference
 ```
 https://stackoverflow.com/questions/77708142/how-can-i-fetch-vram-and-gpu-cache-size-in-linux
 ```
 
+## Monitor GPU Performance 
 For AMD
 ```
 radeontop
 DRI_PRIME=1 glxgears
 ```
 
-Monitor GPU Performance 
 
 # PCIe
 
