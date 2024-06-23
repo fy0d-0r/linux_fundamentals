@@ -7,8 +7,10 @@
 `sudo dmidecode --type 17`
 
 # Graphic Card (Model, GPU, VRAM, Core Clock Speed, GDDR)
-`sudo hwinfo --gfxcard`
-`sudo lshw -C display`
+```
+sudo hwinfo --gfxcard
+sudo lshw -C display
+```
 
 ## Check VRAM Information
 
